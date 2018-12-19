@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Corsair Song Buttons",
+    "description": "This extention will allow the Corssair next song, play, previous song buttons do what you'd think wether or not the window is active.",
+    "version": "0.4",
+    
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Corsair Song Buttons"
+    },
+    
+    /*"background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },*/
+    
+    "content_scripts": [{
+        "matches": ["https://open.spotify.com/*"],
+        "js": ["myScript.js"]
+    }],
+    
+    "permissions": [
+        "storage"
+    ]
+}
